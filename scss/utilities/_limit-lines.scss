@@ -1,0 +1,69 @@
+@use "../abstracts/index" as *;
+
+/*====================
+  Utilities - Placeholder via <data>
+====================*/
+
+$line-clamps: (1, 2);
+$sp-line-clamps: (1);
+$tab-line-clamps: (1);
+
+// Normal viewport
+@each $lines in $line-clamps {
+  data[data-line="#{$lines}"] {
+    display: -webkit-box;
+    -webkit-line-clamp: #{$lines};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    word-break: break-all;
+
+    @if $lines == 1 {
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+}
+
+// Smartphone (SP) styles
+@include on(sp) {
+  @each $lines in $sp-line-clamps {
+    data[data-sp-line="#{$lines}"] {
+      display: -webkit-box;
+      -webkit-line-clamp: #{$lines};
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      word-break: break-all;
+      white-space: unset;
+
+      @if $lines == 1 {
+        white-space: nowrap;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Tablet (Tab) styles
+@include on(tab) {
+  @each $lines in $tab-line-clamps {
+    data[data-tab-line="#{$lines}"] {
+      display: -webkit-box;
+      -webkit-line-clamp: #{$lines};
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      word-break: break-all;
+      white-space: unset;
+
+      @if $lines == 1 {
+        white-space: nowrap;
+        display: inline-block;
+      }
+    }
+  }
+}

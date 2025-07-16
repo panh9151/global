@@ -1,0 +1,58 @@
+/*====================
+  Abstracts - variables
+====================*/
+
+// #region - Breakpoints
+$ssp-breakpoint: 360px;   
+$sp-breakpoint: 480px;    
+$tab-breakpoint: 768px;   
+$ltab-breakpoint: 1024px; 
+$pc-breakpoint: 1280px;   
+$breakpoints: (
+  sp: $sp-breakpoint,
+  tab: $tab-breakpoint,
+  pc: $tab-breakpoint + 1px
+);
+
+$toTargets: (
+  toSp: (
+    ssp: $ssp-breakpoint,
+    lsp: 900px
+  ),
+  toTab: (
+    ltab: $ltab-breakpoint,
+    st: 800px
+  ),
+  toPc: (
+    big: 1300px
+  )
+);
+// #endregion
+
+// #region - Common Colors
+// Dark
+$black0: #000;
+// Light
+$white: #FFF;
+// Red
+$red1: #990000;
+// #endregion
+
+// #region - General Settings
+// Fonts
+$font-noto: "Noto Sans JP", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+
+// Array for loops
+$fonts: (
+  "noto": $font-noto,
+  "poppins": $font-poppins,
+);
+// Settings
+$base-family: $font-noto;
+$base-text-color: $black0;
+$primary: $black0;
+// #endregion
+
+// #region - Components Custom
+// #endregion

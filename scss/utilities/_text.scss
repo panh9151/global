@@ -1,0 +1,10 @@
+@use "../abstracts/index" as *;
+
+/*====================
+  Utilities - Text
+====================*/
+@each $font-name, $font-value in $fonts {
+  .font-#{$font-name} {
+    font-family: $font-value;
+  }
+}

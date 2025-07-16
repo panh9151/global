@@ -1,0 +1,65 @@
+@use "./_vars.scss" as *;
+
+@function get-breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+
+  @each $toName, $toMap in $toTargets {
+    @if map-has-key($toMap, $key) {
+      @return (map-get($toMap, $key), map-get($breakpoints, str-slice($toName, 3)));
+    }
+  }
+
+  @return null;
+}
+
+@mixin media-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin on($args...) {
+  @if length($args) == 1 {
+    $key: nth($args, 1);
+    $val: get-breakpoint($key);
+
+    @if type-of($val) == 'list' and length($val) == 2 {
+      $v1: nth($val, 1);
+      $v2: nth($val, 2);
+      $min: min($v1, $v2);
+      $max: max($v1, $v2);
+      @include media-between($min, $max) { @content; }
+
+    } @else if $val != null {
+      @if $key == sp {
+        @media (max-width: $val) { @content; }
+      } @else if $key == tab {
+        @include media-between(map-get($breakpoints, sp) + 1px, $val) { @content; }
+      } @else if $key == pc {
+        @media (min-width: $val) { @content; }
+      }
+    }
+
+  } @else if length($args) == 2 {
+    $v1: get-breakpoint(nth($args, 1));
+    $v2: get-breakpoint(nth($args, 2));
+
+    $v1: if(type-of($v1) == 'list', nth($v1, 1), $v1);
+    $v2: if(type-of($v2) == 'list', nth($v2, 1), $v2);
+
+    @if $v1 != null and $v2 != null {
+      $min: min($v1, $v2);
+      $max: max($v1, $v2);
+      @include media-between($min + 1px, $max) { @content; }
+    }
+
+  } @else {
+    @each $arg in $args {
+      @include on($arg) {
+        @content;
+      }
+    }
+  }
+}

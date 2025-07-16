@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+/*====================
+  Layout
+====================*/
+$containers: (
+  base: (
+    width: 1160px
+  ),
+  1286: (
+    width: 1286px,
+  ),
+  sp-300: (
+    spWidth: 300px,
+  ),
+);
+
+:root {
+  --padding: 40px;
+  @include on(sp) {
+    --padding: 20px;
+  }
+}
+
+// Container generate
+@each $key, $settings in $containers {
+  $width: if(map-has-key($settings, width), map-get($settings, width), null);
+  $spWidth: if(map-has-key($settings, spWidth), map-get($settings, spWidth), null);
+
+  @if $key == base {
+    @if $width != null {
+      .l-container {
+        width: calc(#{$width} + var(--padding) * 2);
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 var(--padding);
+      }
+    }
+  } @else {
+    .l-container--#{$key} {
+      @if $width != null {
+        width: calc(#{$width} + var(--padding) * 2);
+      }
+      margin: 0 auto;
+      max-width: 100%;
+      padding: 0 var(--padding);
+
+      @if $spWidth != null {
+        @include on(sp) {
+          width: calc(#{$spWidth} + var(--padding) * 2);
+        }
+      }
+    }
+  }
+}

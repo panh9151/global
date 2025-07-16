@@ -1,0 +1,71 @@
+@use "../abstracts/index" as *;
+
+// None
+$display-none-utils: (
+  ".tab-none": (
+    breakpoints: (tab)
+  ),
+  ".sp-none": (
+    breakpoints: (sp)
+  ),
+  ".sp-tab-none": (
+    breakpoints: (sp, tab)
+  )
+);
+
+// Visible
+$display-visible-utils: (
+  ".tab-only": (
+    display: block,
+    breakpoints: (tab)
+  ),
+  ".sp-only": (
+    breakpoints: (pc)
+  ),
+  ".sp-tab-only": (
+    display: block,
+    breakpoints: (sp, tab),
+    variants: (
+      "--inline": inline,
+      "--flex": flex
+    )
+  )
+);
+
+// Loops
+@each $selector, $config in $display-none-utils {
+  $breakpoints: map-get($config, breakpoints);
+
+  #{$selector} {
+    display: none;
+    @include on($breakpoints...) {
+      display: none;
+    }
+  }
+}
+
+@each $selector, $config in $display-visible-utils {
+  $display: map-get($config, display);
+  $breakpoints: map-get($config, breakpoints);
+  $variants: map-get($config, variants);
+
+  #{$selector} {
+    @if $display != none {
+      display: $display;
+    } @else {
+      display: initial;
+    }
+
+    @if $variants {
+      @each $suffix, $variant-display in $variants {
+        &#{$suffix} {
+          display: $variant-display;
+        }
+      }
+    }
+
+    @include on($breakpoints...) {
+      display: initial;
+    }
+  }
+}

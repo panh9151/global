@@ -1,0 +1,21 @@
+@use "sass:math";
+/*====================
+  Abstracts - functions
+====================*/
+
+// Devided values
+@function d($number) {
+  @return $number / 2;
+}
+
+// Calculate line-height
+@function lh($a, $b) {
+  $line-height: math.div($b, $a);
+  $rounded: math.div(round($line-height * 100), 100);
+
+  @if $rounded < 1 or $rounded > 3 {
+    @error "Invalid line-height (#{$rounded}) - lh(#{$a}, #{$b}). Must be between 1 and 3.";
+  }
+
+  @return $rounded;
+}

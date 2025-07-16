@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+/*====================
+  Base - Layout
+====================*/
+body {
+  color: $base-text-color;
+  font-family: $base-family;
+  position: relative;
+  // background-color: $base-background;
+
+  &.is-fixed {
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+
+    &::-webkit-scrollbar {
+      opacity: 0;
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+#main {
+  scroll-margin-top: -30px;
+
+  @include on(sp) {
+    scroll-margin-top: -15px;
+  }
+}
+
+/*====================
+  Base - State Utilities
+====================*/
+.is-disabled,
+a.is-active {
+  pointer-events: none;
+}
+
+/*====================
+  Base - Interaction
+====================*/
+input:hover,
+textarea:hover,
+button:hover,
+a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+input:not([type='checkbox']):focus,
+textarea:focus {
+  box-shadow: 0 0 10px #0000004d;
+}
