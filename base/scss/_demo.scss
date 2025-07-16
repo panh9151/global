@@ -1,0 +1,35 @@
+.container {
+    width: max(1200px, 100vw - 60px);
+}
+
+.a {
+    width: clamp(40px, 4.67vw, 56px);
+    background-color: #ccc;
+    display: block;
+}
+
+.l-container {
+    margin: 0 auto;
+}
+
+.l-container--1200 {
+    width: 1200px;
+    max-width: calc(100vw - (60px));
+}
+
+@media (max-width: 468px) {
+    .l-container--1200 {
+        max-width: calc(100vw - (40px));
+    }
+}
+
+.l-container--1000 {
+    width: 1000px;
+    max-width: calc(100vw - (60px));
+}
+
+@media (max-width: 468px) {
+    .l-container--1000 {
+        max-width: calc(100vw - (40px));
+    }
+}

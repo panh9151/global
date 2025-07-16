@@ -1,0 +1,46 @@
+@use "./variables.scss" as *;
+// ===========================
+// Breakpoint
+// ===========================
+
+// @mixin ssp {
+//     @media (min-width: $sspBreakpoint) and (max-width: $sspBreakpoint) {
+//         @content;
+//     }
+// }
+
+@mixin sp {
+    @media (max-width: $spBreakpoint) {
+        @content;
+    }
+}
+
+// @mixin stab {
+//     @media (min-width: $stabBreakpoint) and (max-width: $stabBreakpoint) {
+//         @content;
+//     }
+// }
+
+@mixin tab {
+    @media (max-width: $tabBreakpoint) {
+        @content;
+    }
+}
+
+// @mixin spc {
+//     @media (min-width: $spcBreakpoint) and (max-width: $spcBreakpoint) {
+//         @content;
+//     }
+// }
+
+@mixin pc-only {
+    @media (min-width: $spcBreakpoint) {
+        @content;
+    }
+}
+
+// @mixin lpc {
+//     @media (min-width: $lpcBreakpoint) {
+//         @content;
+//     }
+// }

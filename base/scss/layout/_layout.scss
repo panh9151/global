@@ -1,0 +1,10 @@
+@use "../abstracts/index" as *;
+// ===========================
+// Layout
+// ===========================
+
+.l-container {
+    margin: 0 auto;
+    @include container (1200, 40);
+    @include container (1000, 40);
+}
