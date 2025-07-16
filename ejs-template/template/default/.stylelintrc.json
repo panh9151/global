@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "block-no-empty": null,
+    "no-empty-source": null,
+    "no-descending-specificity": null,
+    "max-nesting-depth": 6,
+    "selector-max-compound-selectors": 3,
+    "selector-max-id": 2,
+    "selector-class-pattern": null,
+    "value-no-vendor-prefix": null,
+    "function-url-quotes": "never",
+    "scss/dollar-variable-pattern": "^[a-z-]+([a-z0-9-]+[a-z0-9]+)?$"
+  },
+  "ignoreFiles": ["node_modules/**/*", "dist/**/*", "src/_public/**/*"]
+}

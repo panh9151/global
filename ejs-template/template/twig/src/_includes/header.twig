@@ -1,0 +1,27 @@
+<header class="c-header js-header">
+  <div class="c-header__logo">
+    <a href="{{ baseUrl() }}">
+      <img src="/assets/img/logo.png" alt="Logo" srcset="/assets/img/logo@2x.png 2x">
+    </a>
+  </div>
+  <nav class="c-gnav">
+    <ul>
+    {% if linklists.main %}
+      {% for link in linklists.main %}
+        <li>
+          <a class="{% if link.current or link.active %}is-active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+          {% if link.links %}
+            <ul>
+              {% for link in link.links %}
+                <li>
+                  <a class="{% if link.current or link.active %}is-active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endif %}
+    </ul>
+  </nav>
+</header>

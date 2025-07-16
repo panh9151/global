@@ -1,0 +1,92 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "npm i",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: install",
+			"detail": "install packages"
+		},
+		{
+			"type": "shell",
+			"command": "npm run dev",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "vite"
+		},
+		{
+			"type": "shell",
+			"command": "npm run dev:external",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: dev on external link",
+			"detail": "vite --host"
+		},
+		{
+			"type": "shell",
+			"command": "npm run build",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "vite build --emptyOutDir"
+		},
+		{
+			"type": "shell",
+			"command": "npm run preview",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: preview",
+			"detail": "vite preview"
+		},
+		{
+			"type": "shell",
+			"command": "npm run preview:external",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: preview on external link",
+			"detail": "vite preview"
+		},
+		{
+			"type": "shell",
+			"command": "npm run ${input:lintCommand}",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [],
+			"label": "npm: lint...",
+			"detail": "htmlhint, stylelint, eslint"
+		}
+	],
+	"inputs": [
+		{
+			"type": "pickString",
+			"id": "lintCommand",
+			"description": "select command",
+			"options": [
+				"lint",
+				"lint:fix",
+				"htmlhint",
+				"stylelint",
+				"stylelint:fix",
+				"eslint",
+				"eslint:fix"
+			],
+			"default": "lint:fix"
+		}
+	]
+}

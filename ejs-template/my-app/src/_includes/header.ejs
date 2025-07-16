@@ -1,0 +1,27 @@
+<header class="c-header js-header">
+  <div class="c-header__logo">
+    <a href="<%= baseUrl() %>">
+      <img src="/assets/img/logo.png" alt="Logo" srcset="/assets/img/logo@2x.png 2x">
+    </a>
+  </div>
+  <nav class="c-gnav">
+    <ul>
+      <% if (typeof linklists != 'undefined') { %>
+        <% linklists.main && linklists.main.forEach(link => { %>
+          <li>
+            <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
+            <% if (link.links) { %>
+              <ul>
+                <% link.links.forEach(child_link => { %>
+                  <li>
+                    <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            <% } %>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </nav>
+</header>

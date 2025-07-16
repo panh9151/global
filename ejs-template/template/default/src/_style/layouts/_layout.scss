@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+$-padding: 50px;
+
+/*------------------------------------------------------------
+    Layout
+------------------------------------------------------------*/
+.l-container {
+  width: 100%;
+  max-width: $base-width + ($-padding * 2);
+  margin: 0 auto;
+  padding: 0 $-padding;
+}

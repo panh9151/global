@@ -1,0 +1,32 @@
+<%- include('_layouts/base', { title: 'Home page | Vite Template' }); -%>
+
+<!-- @meta -->
+<meta name="description" content="Home page">
+<!-- @@meta -->
+
+<!-- @content -->
+<main class="p-top">
+  <section class="c-mainvisual js-mainvisual">
+    <video class="c-mainvisual__bg" src="/assets/img/background.mp4" autoplay loop muted playsinline></video>
+    <div class="c-mainvisual__container">
+      <div class="l-container">
+        <h1>
+          The Vite Template<br>
+          for Production
+        </h1>
+        <p>
+          This template gives you the best developer experience<br>
+          with all the features you need for production
+        </p>
+        <a href="<%= baseUrl('#') %>" class="c-btn1">Read more</a>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- @@content -->
+
+<!-- @script -->
+<script>
+  console.log("home page");
+</script>
+<!-- @@script -->
