@@ -1,0 +1,90 @@
+@use "sass:math";
+@use "sass:color";
+@use "../breakpoints" as *;
+@use "./function" as *;
+@use "./variables" as *;
+
+@mixin txt(
+  $fontSize: 16,
+  $lineHeight: 24,
+  $fontWeight: 400,
+  $letterSpacing: auto,
+  $color: $baseColor,
+  $fontFamily: ""
+) {
+  @if $fontSize != "" {
+    $remSize: px-to-em(math.div($fontSize, 10), 1) * 1rem;
+    font-size: $remSize;
+  }
+
+  @if $fontWeight != "" {
+    font-weight: $fontWeight;
+  }
+
+  @if $lineHeight != "" and $fontSize != "" {
+    $computedLineHeight: px-to-em(math.div($lineHeight, $fontSize), 2);
+    line-height: $computedLineHeight;
+  }
+
+  @if $letterSpacing != "" {
+    $computedLetterSpacing: px-to-em(math.div($letterSpacing, 1000), 3) * 1em;
+    letter-spacing: $computedLetterSpacing;
+  }
+
+  @if $color != "" {
+    color: #{$color};
+  }
+
+  @if $fontFamily != "" {
+    font-family: $fontFamily;
+  }
+
+  @content;
+}
+
+@mixin sp-txt(
+  $fontSize: "",
+  $lineHeight: "",
+  $fontWeight: "",
+  $letterSpacing: "",
+  $color: $baseColor,
+  $fontFamily: ""
+) {
+  @include sp {
+    @if $fontSize != "" {
+      $remSize: px-to-em(math.div($fontSize, 10), 1) * 1rem;
+      font-size: h($remSize);
+    }
+  
+    @if $fontWeight != "" {
+      font-weight: $fontWeight;
+    }
+  
+    @if $lineHeight != "" and $fontSize != "" {
+      $computedLineHeight: px-to-em(math.div($lineHeight, $fontSize), 2);
+      line-height: h($computedLineHeight);
+    }
+  
+    @if $letterSpacing != "" {
+      $computedLetterSpacing: px-to-em(math.div($letterSpacing, 1000), 3) * 1em;
+      letter-spacing: $computedLetterSpacing;
+    }
+  
+    @if $color != "" {
+      color: #{to-hex($color)};
+    }
+  
+    @if $fontFamily != "" {
+      font-family: $fontFamily;
+    }
+  
+    @content;
+  }
+}
+
+@mixin bg($url: "", $repeat: "no-repeat", $position: "center", $size: "cover") {
+  @if $url != "" {
+    background: url($url) $position / $size $repeat;
+  }
+  @content;
+}

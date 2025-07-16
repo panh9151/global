@@ -1,0 +1,99 @@
+@use "sass:math";
+@use "sass:color";
+@use "./breakpoint" as *;
+@use "./function" as *;
+@use "./variables" as *;
+// ===========================
+// Layout
+// ===========================
+
+@mixin txt($fontSize: 16,
+    $lineHeight: 24,
+    $fontWeight: 400,
+    $letterSpacing: auto,
+    $color: $baseColor,
+    $fontFamily: inherit) {
+    @if $fontSize !="" {
+        $remSize: round-to(math.div($fontSize, 10), 1) * 1rem;
+        font-size: $remSize;
+    }
+
+    @if $fontWeight !="" {
+        font-weight: $fontWeight;
+    }
+
+    @if $lineHeight !="" and $fontSize !="" {
+        $computedLineHeight: round-to(math.div($lineHeight, $fontSize), 2);
+        line-height: $computedLineHeight;
+    }
+
+    @if $letterSpacing !="" {
+        $computedLetterSpacing: round-to(math.div($letterSpacing, 1000), 3) * 1em;
+        letter-spacing: $computedLetterSpacing;
+    }
+
+    @if $color !="" {
+        color: #{$color};
+    }
+
+    @if $fontFamily !="" {
+        font-family: $fontFamily;
+    }
+
+    @content;
+}
+
+@mixin sp-txt($fontSize: "",
+    $lineHeight: "",
+    $fontWeight: "",
+    $letterSpacing: "",
+    $color: $baseColor,
+    $fontFamily: "inherit"
+
+) {
+    @include sp {
+        @if $fontSize !="" {
+            $remSize: round-to(math.div($fontSize, 10), 1) * 1rem;
+            font-size: h($remSize);
+        }
+
+        @if $fontWeight !="" {
+            font-weight: $fontWeight;
+        }
+
+        @if $lineHeight !="" and $fontSize !="" {
+            $computedLineHeight: round-to(math.div($lineHeight, $fontSize), 2);
+            line-height: h($computedLineHeight);
+        }
+
+        @if $letterSpacing !="" {
+            $computedLetterSpacing: round-to(math.div($letterSpacing, 1000), 3) * 1em;
+            letter-spacing: $computedLetterSpacing;
+        }
+
+        @if $color !="" {
+            color: #{to-hex($color)};
+        }
+
+        @if $fontFamily !="" {
+            font-family: $fontFamily;
+        }
+
+        @content;
+    }
+}
+
+@mixin bg($pcUrl: "", $repeat: "no-repeat", $position: "center", $size: "cover") {
+    // PC
+    @if $pcUrl !="" {
+        background: url($pcUrl) $position / $size $repeat;
+    }
+    @content;
+}
+
+@mixin container ($pcWidth, $spGap: 40) {
+    &--#{$pcWidth} {
+      width: #{$pcWidth}px;
+      max-width: calc(100vw - (#{$spGap}px));
+    }
+  }

@@ -1,0 +1,94 @@
+
+Anh's Site Checker
+1.0
+📌 Site Checker – A Chrome extension for analyzing and optimizing websites. Inspect fonts, images, clickable elements, validation, CSS, and text properties. 🚀 A must-have for web developers!
+ID: jnflggenfgnodfflgcfajjlcbnpgnjin
+Inspect views
+service worker (Inactive)
+
+ColorZilla
+4.1
+Advanced Eyedropper, Color Picker, Gradient Generator and other colorful goodies
+ID: bhlhnicpbhignbdhedgjhgdocnmhomnp
+Inspect views
+service worker,
+ 1 more…
+
+CSS Used
+3.0.0
+Get all css rules used by the selected DOM and its descendants.
+ID: cdopjfddjlonogibjahpnmjpoangjfff
+
+Export Chrome History
+1.0.2.0
+Export your Chrome History as an Excel-readable CSV file or as a JSON file.
+ID: dihloblpkeiddiaojbagoecedbfpifdj
+
+Google Docs Offline
+1.91.1
+Edit, create, and view your documents, spreadsheets, and presentations — all without internet access.
+ID: ghbmnnjooekpmoecnnnilnnbdlolhkhi
+Inspect views
+service worker (Inactive)
+
+Gyazo - Share new screenshots. Instantly.
+5.11.2
+Screenshot websites, save images, share instantly.
+ID: ffdaeeijbbijklfcpahbghahojgfgebo
+Inspect views
+service worker
+
+History Trends Unlimited
+1.8.5
+Search and analyze your unlimited history.
+ID: pnmchffiealhkdloeffcdnbgdnedheme
+Inspect views
+service worker (Inactive),
+ 2 more…
+
+HTML Validator
+0.9.9.8
+Add HTML Validator in Developer Tools
+ID: mpbelhhnfhfjnaehkcnnaknldmnocglk
+Inspect views
+service worker (Inactive)
+
+HTML5 Outliner
+0.9.0
+Generates a navigable page outline with heading and sectioning elements
+ID: afoibpobokebhgfnknfndkgemglggomo
+
+Image ALT
+Final Build
+Check all image and SVG elements are accessible.
+ID: boapfjenhbedppddepigmcmeogjlbfjg
+Inspect views
+service worker
+
+Image Alt Text Viewer
+1.3
+Display alternative texts for images on a web page.
+ID: nhmihbneenlkbjjpbimhegikadfleccd
+Inspect views
+service worker
+
+Page Ruler
+0.1.5
+Measure page elements size in pixel with an easy-to-use ruler.
+ID: jcbmcnpepaddcedmjdcmhbekjhbfnlff
+Inspect views
+service worker
+
+PerfectPixel by WellDoneCode (pixel perfect)
+2.2.0.6
+This extension helps develop your websites with pixel perfect accuracy!
+ID: dkaagdgjmgdmbnecmcefdhjekcoceebi
+Inspect views
+service worker
+
+WhatFont
+3.2.0
+The easiest way to identify fonts on web pages.
+ID: jabopobgcpjmedljpbcaablpmlmfcogm
+Inspect views
+service worker (Inactive)

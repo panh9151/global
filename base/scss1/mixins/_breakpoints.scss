@@ -1,0 +1,41 @@
+@mixin ssp {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 468px) {
+    @content;
+  }
+}
+
+@mixin stab {
+  @media (max-width: 687px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin spc {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lpc {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}

@@ -1,0 +1,18 @@
+@use "./mixins/index.scss" as *;
+
+.a {
+  width: getSize(56, 30, 1200);
+  height: 100px;
+  background-color: #777;
+  @include txt (16, 24, 700, 100, "", "");
+  @include sp-txt (16, 32, 400, "", "", "") {
+    @include hover;
+    @include bg ("pcUrl", "no-repeat", "positionenter", "sizeover"
+    );
+  };
+} 
+
+.container {
+  width: min(1200px, calc(100vw - 60px));
+  margin: auto;
+}
