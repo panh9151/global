@@ -1,0 +1,44 @@
+{
+  "name": "create-agl-template",
+  "version": "1.0.0",
+  "description": "Create front end template with one command",
+  "type": "module",
+  "license": "ISC",
+  "author": "Dong Nguyen",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "clean:app": "rimraf my-app",
+    "start": "node dist/index.js",
+    "start:app": "rimraf my-app && node dist/index.js my-app",
+    "install:global": "npm install && npm run build && npm install -g"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allgrow-labo/create-agl-template"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@types/prompts": "^2.4.7",
+    "@types/validate-npm-package-name": "^4.0.1",
+    "rimraf": "^5.0.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "commander": "^10.0.1",
+    "cross-env": "^7.0.3",
+    "execa": "^7.1.1",
+    "fast-glob": "^3.3.1",
+    "ora": "^7.0.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "validate-npm-package-name": "^5.0.0"
+  }
+}

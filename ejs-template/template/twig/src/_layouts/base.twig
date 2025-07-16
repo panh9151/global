@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+  {% if title %}
+    {{ title }}
+  {% else %}
+    Vite Template
+  {% endif %}
+  </title>
+
+  {% block meta %}{% endblock %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script type="module" src="/_style/style.js"></script>
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  {% block header %}
+    {% include "include::header.twig" %}
+  {% endblock %}
+
+  {% block content %}{% endblock %}
+
+  {% block footer %}
+    {% include "include::footer.twig" %}
+  {% endblock %}
+
+  {% block script %}{% endblock %}
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
