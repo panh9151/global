@@ -1,0 +1,10 @@
+.rootLayout {
+  display: flex;
+  padding-left: 460px;
+
+  .mainContain {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  }
+}
