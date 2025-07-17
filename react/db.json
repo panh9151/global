@@ -1,0 +1,379 @@
+{
+  "topics": [
+    {
+      "id": "topic_travel",
+      "name": "Travel & Tourism",
+      "description": "Từ vựng về du lịch",
+      "groups": ["group_transport", "group_accommodation"]
+    },
+    {
+      "id": "topic_food",
+      "name": "Food & Dining",
+      "description": "Từ vựng về ẩm thực và ăn uống",
+      "groups": ["group_restaurant", "group_cooking", "group_ingredients"]
+    }
+  ],
+  "groups": [
+    {
+      "id": "group_transport",
+      "topicId": "topic_travel",
+      "name": "Transport Vocabulary",
+      "order": 1,
+      "words": ["word_airplane", "word_subway", "word_ticket", "word_luggage"]
+    },
+    {
+      "id": "group_accommodation",
+      "topicId": "topic_travel",
+      "name": "Accommodation Vocabulary",
+      "order": 2,
+      "words": ["word_hotel", "word_hostel", "word_checkin", "word_reservation"]
+    },
+    {
+      "id": "group_restaurant",
+      "topicId": "topic_food",
+      "name": "Restaurant Vocabulary",
+      "order": 1,
+      "words": ["word_menu", "word_waiter", "word_bill", "word_tip"]
+    },
+    {
+      "id": "group_cooking",
+      "topicId": "topic_food",
+      "name": "Cooking Actions",
+      "order": 2,
+      "words": ["word_boil", "word_chop", "word_grill", "word_season"]
+    },
+    {
+      "id": "group_ingredients",
+      "topicId": "topic_food",
+      "name": "Basic Ingredients",
+      "order": 3,
+      "words": ["word_flour", "word_sugar", "word_egg", "word_salt"]
+    }
+  ],
+  "words": [
+    {
+      "id": "word_airplane",
+      "groupId": "group_transport",
+      "term": "airplane",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈer.pleɪn/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a powered flying vehicle with fixed wings", "vi": "máy bay" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "transport", "travel"]
+    },
+    {
+      "id": "word_subway",
+      "groupId": "group_transport",
+      "term": "subway",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈsʌb.weɪ/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "an underground railway system", "vi": "tàu điện ngầm" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "transport"]
+    },
+    {
+      "id": "word_ticket",
+      "groupId": "group_transport",
+      "term": "ticket",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ˈtɪk.ɪt/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a printed piece of paper that gives the holder a certain right", "vi": "vé" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "transport"]
+    },
+    {
+      "id": "word_luggage",
+      "groupId": "group_transport",
+      "term": "luggage",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ˈlʌɡ.ɪdʒ/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "bags and suitcases you take on a trip", "vi": "hành lý" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "travel"]
+    },
+
+    {
+      "id": "word_hotel",
+      "groupId": "group_accommodation",
+      "term": "hotel",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/həʊˈtel/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a building where people pay to stay and eat meals", "vi": "khách sạn" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "travel"]
+    },
+    {
+      "id": "word_hostel",
+      "groupId": "group_accommodation",
+      "term": "hostel",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ˈhɒs.təl/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a budget place to stay with shared rooms", "vi": "nhà trọ, ký túc xá" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["B1", "travel"]
+    },
+    {
+      "id": "word_checkin",
+      "groupId": "group_accommodation",
+      "term": "check-in",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈtʃek.ɪn/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "the act of reporting your arrival at a hotel or airport", "vi": "thủ tục nhận phòng/đăng ký" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "travel"]
+    },
+    {
+      "id": "word_reservation",
+      "groupId": "group_accommodation",
+      "term": "reservation",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˌrez.əˈveɪ.ʃən/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "an arrangement to secure accommodation in advance", "vi": "đặt chỗ trước" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "travel"]
+    },
+
+    {
+      "id": "word_menu",
+      "groupId": "group_restaurant",
+      "term": "menu",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ˈmen.juː/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a list of dishes in a restaurant", "vi": "thực đơn" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "food"]
+    },
+    {
+      "id": "word_waiter",
+      "groupId": "group_restaurant",
+      "term": "waiter",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈweɪ.t̬ɚ/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a man whose job is to serve customers at their tables", "vi": "bồi bàn nam" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "food"]
+    },
+    {
+      "id": "word_bill",
+      "groupId": "group_restaurant",
+      "term": "bill",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/bɪl/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a statement of money owed for goods or services", "vi": "hóa đơn" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "food"]
+    },
+    {
+      "id": "word_tip",
+      "groupId": "group_restaurant",
+      "term": "tip",
+      "pronunciations": [{ "dialect": "US", "ipa": "/tɪp/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "extra money given for good service", "vi": "tiền boa" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "food"]
+    },
+
+    {
+      "id": "word_boil",
+      "groupId": "group_cooking",
+      "term": "boil",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/bɔɪl/" }],
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definitions": [
+            { "en": "to cook in hot bubbling water", "vi": "luộc, đun sôi" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "cooking"]
+    },
+    {
+      "id": "word_chop",
+      "groupId": "group_cooking",
+      "term": "chop",
+      "pronunciations": [{ "dialect": "US", "ipa": "/tʃɑːp/" }],
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definitions": [
+            { "en": "to cut into pieces with repeated sharp blows", "vi": "cắt, chặt, thái" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A2", "cooking"]
+    },
+    {
+      "id": "word_grill",
+      "groupId": "group_cooking",
+      "term": "grill",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ɡrɪl/" }],
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definitions": [
+            { "en": "to cook over direct heat", "vi": "nướng vỉ" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["B1", "cooking"]
+    },
+    {
+      "id": "word_season",
+      "groupId": "group_cooking",
+      "term": "season",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈsiː.zən/" }],
+      "senses": [
+        {
+          "partOfSpeech": "verb",
+          "definitions": [
+            { "en": "to add salt, herbs, or spices", "vi": "nêm gia vị" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["B1", "cooking"]
+    },
+
+    {
+      "id": "word_flour",
+      "groupId": "group_ingredients",
+      "term": "flour",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/ˈflaʊə/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "powder from grinding grains, used for baking", "vi": "bột mì" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "ingredient"]
+    },
+    {
+      "id": "word_sugar",
+      "groupId": "group_ingredients",
+      "term": "sugar",
+      "pronunciations": [{ "dialect": "US", "ipa": "/ˈʃʊɡ.ɚ/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a sweet crystalline substance", "vi": "đường" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "ingredient"]
+    },
+    {
+      "id": "word_egg",
+      "groupId": "group_ingredients",
+      "term": "egg",
+      "pronunciations": [{ "dialect": "UK", "ipa": "/eɡ/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "an oval object laid by birds, eaten as food", "vi": "trứng" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "ingredient"]
+    },
+    {
+      "id": "word_salt",
+      "groupId": "group_ingredients",
+      "term": "salt",
+      "pronunciations": [{ "dialect": "US", "ipa": "/sɒlt/" }],
+      "senses": [
+        {
+          "partOfSpeech": "noun",
+          "definitions": [
+            { "en": "a white crystalline substance used to season food", "vi": "muối" }
+          ]
+        }
+      ],
+      "proficiencyLevel": 0,
+      "tags": ["A1", "ingredient"]
+    }
+  ]
+}
